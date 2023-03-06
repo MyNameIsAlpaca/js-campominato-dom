@@ -1,0 +1,169 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+    height: 60px;
+    align-items: center;
+}
+
+
+header .title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    align-self: center;
+}
+
+.img-container{
+
+    display: flex;
+    justify-content: center;
+}
+
+@keyframes vibrate {
+    0% { transform: rotate(0deg); }
+    10% { transform: rotate(-5deg); }
+    20% { transform: rotate(1deg); }
+    30% { transform: rotate(0deg); }
+    40% { transform: rotate(1deg); }
+    50% { transform: rotate(-5deg); }
+    60% { transform: rotate(0deg); }
+    70% { transform: rotate(-5deg); }
+    80% { transform: rotate(1deg); }
+    90% { transform: rotate(0deg); }
+    100% { transform: rotate(-5deg); }
+  }
+
+header .img-container img {
+    width: 50px;
+    height: 50px;
+    animation: vibrate 0.7s infinite;
+    margin-left: 50px
+}
+
+header .title {
+    display: flex;
+}
+
+header .title h1 {
+    font-size: 3em;
+}
+
+main {
+    background-image: url(../img/background.jpg);
+    background-size: cover;
+    height: calc(100vh - 110px);
+    display: flex;
+    align-items: center;
+    backdrop-filter: blur(100px);
+}
+
+.square {
+    border: 1px solid black;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 25px;
+    background-color: rgba(139, 0, 139, 0.445);
+}
+
+.square:hover {
+    background-color: rgba(0, 0, 139, 0.322);
+}
+
+.grid-container{
+    display: none;
+    flex-flow: row wrap;
+    margin: auto;
+    border: 1px solid black;
+    background-color: rgba(73, 5, 128, 0.651);
+    color: white;
+    border-radius: 25px;
+}
+
+.grid-container-hard {
+    width: calc(60px * 10 + 2px);
+}
+
+.grid-container-medium {
+    width: calc(60px * 9 + 2px);
+}
+
+.grid-container-easy {
+    width: calc(60px * 7 + 2px);
+}
+
+.colorBackground {
+    background-color: rgb(127, 136, 255);
+}
+
+.start {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.difficulty {
+    display: flex;
+    gap: 10px;
+}
+
+.difficulty span {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.difficulty #difficult-choose {
+    padding: 0 10px;
+}
+
+#start-game {
+    padding: 7px;
+    background-color: white;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+footer {
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid-container {
+    animation: float 3s linear infinite;
+  }
+  
+  @keyframes float {
+    0% {
+      box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+      transform: translatey(0px);
+    }
+    50% {
+      box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);
+      transform: translatey(-20px);
+    }
+    100% {
+      box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+      transform: translatey(0px);
+    }
+  }
+
+  .bomb {
+    background-color: red;
+  }
