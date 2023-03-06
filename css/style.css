@@ -78,7 +78,9 @@ main {
     justify-content: center;
     cursor: pointer;
     border-radius: 25px;
-    background-color: rgba(139, 0, 139, 0.445);
+    /* background-image: url(../img/bomb.png); */
+    background-size: contain;
+    font-size: 1em;
 }
 
 .square:hover {
@@ -108,7 +110,7 @@ main {
 }
 
 .colorBackground {
-    background-color: rgb(127, 136, 255);
+    background-color: blue;
 }
 
 .start {
@@ -165,5 +167,8 @@ footer {
   }
 
   .bomb {
+    background-image: url(../img/explosion.png);
     background-color: red;
   }
+
+ 
