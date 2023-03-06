@@ -6,10 +6,17 @@ let gridContainer = document.getElementById("grid-container");
 
 let difficultChoose; 
 
+let clickCounter = 0;
 
+let gridCover = document.getElementById("grid-cover");
+
+let result = document.getElementById("result");
 
 //memorizzo numero totale square
 
+//seleziono tutti gli square
+
+let squareSelector = document.getElementsByClassName('square');
 
 //creo il funzionamento del tasto start
 
@@ -66,23 +73,39 @@ startGame.addEventListener("click", function(){
             //aggiungo background al click agli square
             
             square.addEventListener("click", function(){
-                //seleziono tutti gli square
+
+                //genero una condizione di vittoria in base ai click
+
+                if(clickCounter == 84) {
+                    document.getElementById("result").innerHTML = `Hai vinto con un punteggio di: ${clickCounter + 1}!`;
+                    gridCover.style.display = "flex";
+                } else{
     
-                let squareSelector = document.getElementsByClassName('square');
-                
-                if (bombArray.includes(parseInt(square.innerText))) {
+                    if (bombArray.includes(parseInt(square.innerText))) {
 
-                    square.classList.add("bomb");
+                        document.getElementById("result").innerHTML = `Hai perso con un punteggio di: ${clickCounter + 1}!`;
 
-                    for(ia = 0; ia < 16; ia++) {
+                        gridCover.style.display = "flex";
+
+                        square.classList.add("bomb");
                         
-                        squareSelector[parseInt(bombArray[ia] - 1)].classList.add("bomb");
+                        clickCounter++;
 
+                        for(ia = 0; ia < 16; ia++) {
+                            
+                            squareSelector[parseInt(bombArray[ia] - 1)].classList.add("bomb");
+    
+                        }
+    
+                    } else {
+                        square.classList.add("colorBackground");
+                        clickCounter++
                     }
-
-                } else {
-                    square.classList.add("colorBackground");
                 }
+
+                console.log(bombArray)
+                
+                
             }, {once : true});
         }
     }  else if (difficultChoose == "medium") {
@@ -130,25 +153,42 @@ startGame.addEventListener("click", function(){
             //aggiungo background al click agli square
             
             square.addEventListener("click", function(){
-                //seleziono tutti gli square
+
+                //genero una condizione di vittoria in base ai click
+
+                if(clickCounter == 65) {
+                    document.getElementById("result").innerHTML = `Hai vinto con un punteggio di: ${clickCounter + 1}!`;
+                    gridCover.style.display = "flex";
+                } else{
     
-                let squareSelector = document.getElementsByClassName('square');
-                
-                if (bombArray.includes(parseInt(square.innerText))) {
+                    if (bombArray.includes(parseInt(square.innerText))) {
 
-                    square.classList.add("bomb");
+                        document.getElementById("result").innerHTML = `Hai perso con un punteggio di: ${clickCounter + 1}!`;
 
-                    for(ia = 0; ia < 16; ia++) {
+                        gridCover.style.display = "flex";
+
+                        square.classList.add("bomb");
                         
-                        squareSelector[parseInt(bombArray[ia] - 1)].classList.add("bomb");
+                        clickCounter++;
 
+                        for(ia = 0; ia < 16; ia++) {
+                            
+                            squareSelector[parseInt(bombArray[ia] - 1)].classList.add("bomb");
+    
+                        }
+    
+                    } else {
+                        square.classList.add("colorBackground");
+                        clickCounter++
                     }
-
-                } else {
-                    square.classList.add("colorBackground");
                 }
+
+                console.log(bombArray)
+                
+                
             }, {once : true});
         }
+
     } else if (difficultChoose == "easy") {
 
         document.getElementById("grid-container").style.display = "flex";
@@ -169,7 +209,9 @@ startGame.addEventListener("click", function(){
         //creo le caselle
         
         for (let i = 0; i < 49; i++) {
-    
+
+             
+            
             let square = document.createElement("div");
         
             square.classList.add("easy-square", "square");
@@ -194,23 +236,39 @@ startGame.addEventListener("click", function(){
             //aggiungo background al click agli square
             
             square.addEventListener("click", function(){
-                //seleziono tutti gli square
+
+                //genero una condizione di vittoria in base ai click
+
+                if(clickCounter == 33) {
+                    document.getElementById("result").innerHTML = `Hai vinto con un punteggio di: ${clickCounter + 1}!`;
+                    gridCover.style.display = "flex";
+                } else{
     
-                let squareSelector = document.getElementsByClassName('square');
-                
-                if (bombArray.includes(parseInt(square.innerText))) {
+                    if (bombArray.includes(parseInt(square.innerText))) {
 
-                    square.classList.add("bomb");
+                        document.getElementById("result").innerHTML = `Hai perso con un punteggio di: ${clickCounter + 1}!`;
 
-                    for(ia = 0; ia < 16; ia++) {
+                        gridCover.style.display = "flex";
+
+                        square.classList.add("bomb");
                         
-                        squareSelector[parseInt(bombArray[ia] - 1)].classList.add("bomb");
+                        clickCounter++;
 
+                        for(ia = 0; ia < 16; ia++) {
+                            
+                            squareSelector[parseInt(bombArray[ia] - 1)].classList.add("bomb");
+    
+                        }
+    
+                    } else {
+                        square.classList.add("colorBackground");
+                        clickCounter++
                     }
-
-                } else {
-                    square.classList.add("colorBackground");
                 }
+
+                console.log(bombArray)
+                
+                
             }, {once : true});
             
         }
