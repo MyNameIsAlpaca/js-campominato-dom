@@ -77,13 +77,13 @@ startGame.addEventListener("click", function(){
                 //genero una condizione di vittoria in base ai click
 
                 if(clickCounter == 84) {
-                    document.getElementById("result").innerHTML = `Hai vinto con un punteggio di: ${clickCounter + 1}!`;
+                    document.getElementById("result").innerHTML = `Hai vinto con un punteggio di: ${clickCounter}!`;
                     gridCover.style.display = "flex";
                 } else{
     
                     if (bombArray.includes(parseInt(square.innerText))) {
 
-                        document.getElementById("result").innerHTML = `Hai perso con un punteggio di: ${clickCounter + 1}!`;
+                        document.getElementById("result").innerHTML = `Hai perso con un punteggio di: ${clickCounter}!`;
 
                         gridCover.style.display = "flex";
 
@@ -157,13 +157,13 @@ startGame.addEventListener("click", function(){
                 //genero una condizione di vittoria in base ai click
 
                 if(clickCounter == 65) {
-                    document.getElementById("result").innerHTML = `Hai vinto con un punteggio di: ${clickCounter + 1}!`;
+                    document.getElementById("result").innerHTML = `Hai vinto con un punteggio di: ${clickCounter}!`;
                     gridCover.style.display = "flex";
                 } else{
     
                     if (bombArray.includes(parseInt(square.innerText))) {
 
-                        document.getElementById("result").innerHTML = `Hai perso con un punteggio di: ${clickCounter + 1}!`;
+                        document.getElementById("result").innerHTML = `Hai perso con un punteggio di: ${clickCounter}!`;
 
                         gridCover.style.display = "flex";
 
@@ -240,13 +240,13 @@ startGame.addEventListener("click", function(){
                 //genero una condizione di vittoria in base ai click
 
                 if(clickCounter == 33) {
-                    document.getElementById("result").innerHTML = `Hai vinto con un punteggio di: ${clickCounter + 1}!`;
+                    document.getElementById("result").innerHTML = `Hai vinto con un punteggio di: ${clickCounter}!`;
                     gridCover.style.display = "flex";
                 } else{
     
                     if (bombArray.includes(parseInt(square.innerText))) {
 
-                        document.getElementById("result").innerHTML = `Hai perso con un punteggio di: ${clickCounter + 1}!`;
+                        document.getElementById("result").innerHTML = `Hai perso con un punteggio di: ${clickCounter}!`;
 
                         gridCover.style.display = "flex";
 
