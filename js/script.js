@@ -68,7 +68,7 @@ startGame.addEventListener("click", function(){
     
             //assegno ad ogni square un numero da uno a 100
     
-            square.innerText = i;
+            square.innerText = i + 1;
     
             //aggiungo background al click agli square
             
@@ -148,7 +148,7 @@ startGame.addEventListener("click", function(){
     
             //assegno ad ogni square un numero da uno a 100
     
-            square.innerText = i;
+            square.innerText = i + 1;
     
             //aggiungo background al click agli square
             
